@@ -20,23 +20,19 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //--------------------------------------------------------------//
 
-Route::get('/', array('uses'=>'StoreController@getIndex'));
-
-Route::resource('admin/cars', 'CarsController');
-Route::resource('store', 'StoreController');
+//Route::get('/', array('uses'=>'StoreController@getIndex'));
+//Route::resource('admin/cars', 'CarsController');
+//Route::resource('store', 'StoreController');
+//Route::get('/', ['before'=>'csrf','uses' => 'StoreController@getIndex', 'as' => '/']);
 
 Route::group(['middleware' => ['web']], function () {
+  //Route::resource('/', 'StoreController');
 	Route::resource('users', 'UsersController');
-	//Route::post('bookings/create', 'BookingsController@postCreate');
-	//Route::resource('bookings', 'BookingsController');
-	
+  Route::resource('admin/cars', 'CarsController');
+  Route::resource('store', 'StoreController');
+  Route::get('/', array('uses'=>'StoreController@getIndex'));
+
 });
-#
-#
 
-/*Route::resources([
-    'photos' => 'PhotoController',
-    'posts' => 'PostController'
-]);*/
-
-//$this->app['request']->setSession($this->app['session']->driver('array'));
+////Route::post('bookings/create', 'BookingsController@postCreate');
+////Route::resource('bookings', 'BookingsController');

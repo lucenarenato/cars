@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Middleware\VerifyCsrfToken;
 
 use Illuminate\Http\Request;
 
@@ -54,7 +55,7 @@ class BookingsController extends BaseController {
 	}
 
 	public function getManage() {
-		
+
 		return View::make('bookings.manage')
 			->with('bookings', Booking::orderBy('created_at', 'DESC')->paginate(10));
 	}

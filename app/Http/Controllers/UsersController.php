@@ -7,15 +7,16 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Middleware\VerifyCsrfToken;
 use App\User;
-use Auth;
+//use Auth;
 
 
 class UsersController extends BaseController {
 
 	public function __construct() {
 		parent::__construct();
-		//$this->middleware('csrf', array('on'=>'post'));
+		$this->middleware('csrf', array('on'=>'post'));
 		$this->middleware('auth');
 	}
 

@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
+use App\Http\Middleware\VerifyCsrfToken;
 
 class StoreController extends BaseController {
 
 	public function __construct() {
 		parent::__construct();
-		/*$this->middleware('csrf', array('on'=>'post'));
-		$this->middleware('auth', array('only'=>array('getBookCar')));*/
+		$this->middleware('csrf', array('on'=>'post'));
+		$this->middleware('auth', array('only'=>array('getBookCar')));
 		$this->middleware('auth');
 	}
 
