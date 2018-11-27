@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
-use App\Http\Middleware\VerifyCsrfToken;
+//use App\Http\Middleware\VerifyCsrfToken;
 
 class StoreController extends BaseController {
 

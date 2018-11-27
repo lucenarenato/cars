@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Middleware\VerifyCsrfToken;
+//use App\Http\Middleware\VerifyCsrfToken;
 
 use Illuminate\Http\Request;
 

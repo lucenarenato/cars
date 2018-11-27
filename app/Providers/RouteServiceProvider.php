@@ -15,6 +15,10 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
+    protected $middleware = [
+      // ....
+      'csrf'  => 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken',
+    ];
 
     /**
      * Define your route model bindings, pattern filters, etc.

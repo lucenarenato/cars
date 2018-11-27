@@ -9,6 +9,8 @@
         <title>CarRental</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <meta name="author" content="https://github.com/lucenarenato">
+        <meta name="csrf-token" content="">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -18,6 +20,13 @@
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
     </head>
     <body>
+        
+        <form method="POST" action="">
+            @csrf
+             {{ csrf_field() }}
+            <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />{!! Form::token() !!}
+        </form>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->

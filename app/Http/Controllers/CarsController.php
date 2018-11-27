@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+//use App\Http\Middleware\VerifyCsrfToken;
+//use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Http\Request;
 
 class CarsController extends BaseController {
@@ -9,6 +11,7 @@ class CarsController extends BaseController {
 	public function __construct() {
 		parent::__construct();
 		$this->middleware('csrf', array('on'=>'post'));
+		//$this->middleware('verifyCsrd',['only' => 'post']);
 		$this->middleware('admin');
 	}
 
