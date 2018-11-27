@@ -5,6 +5,7 @@
 </p>
 
 # Laravel 5.6 Car Rental Site
+<p align="center"><img src="carrental.png"></p>
 
 ## Features
 
