@@ -147,7 +147,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        //Collective\Html\HtmlServiceProvider, //adicionado
+        //Collective\Html\HtmlServiceProvider::class, //adicionado
         //Intervention\Image\ImageServiceProvider::class, //adicionado
         //'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
         //'Illuminate\Cookie\Middleware\EncryptCookies',

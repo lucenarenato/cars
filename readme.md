@@ -15,6 +15,10 @@
 * Check booking status and cancel pending booking by user
 * Cars, car types and bookings management for Admin.
 
+ - composer install
+ - composer require anlutro/l4-settings
+ - php artisan vendor:publish --provider="anlutro\LaravelSettings\ServiceProvider" --tag="config"
+ - composer require barryvdh/laravel-cors
  - php artisan key:generate
  - php artisan route:list
  - chmod -R 777 storage/*
